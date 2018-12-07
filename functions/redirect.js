@@ -45,9 +45,6 @@ exports.handler = async (event, context) => {
     const longLinkField = getEnv('AIRTABLE_LONG_LINK_FIELD', 'Long Link')
     const Airtable = require('airtable')
     log(`Attempting to get long link for code "${code}"`)
-    log(`The base is "${base}"`)
-    log(`The shortCodeField is "${shortCodeField}"`)
-    log(`The longLinkField is "${longLinkField}"`)
     const result = await new Airtable({apiKey})
       .base(base)(table)
       .select({
