@@ -47,7 +47,7 @@ exports.handler = async (event, context) => {
     log(`Attempting to get long link for code "${code}"`)
     log(`The base is "${base}"`)
     log(`The shortCodeField is "${shortCodeField}"`)
-    log(`The longLinkField is "${LongLinkField}"`)
+    log(`The longLinkField is "${longLinkField}"`)
     const result = await new Airtable({apiKey})
       .base(base)(table)
       .select({
